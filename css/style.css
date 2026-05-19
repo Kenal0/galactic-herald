@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/fonts/OpenSans-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/fonts/OpenSans-Regular.ttf") format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 .container {
     max-width: 1520px;
     margin-left: auto;
@@ -33,4 +49,34 @@
     text-transform: uppercase;
     letter-spacing: 0.125em;
     color: #2C145E;
+}
+
+.main-content {
+    background-image: url("/uploads/0cdfb0183c985bea52e35b50e99f0909.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 218px;
+    padding-bottom: 256px;
+}
+
+.hero-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin: 0 0 30px 0;
+    letter-spacing: 0;
+}
+
+.hero-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: 0;
+    аааааа
 }
