@@ -43,8 +43,8 @@ body {
     display: block;
     width: 93px;
     height: 66px;
-    padding-top: 3.93px;
-    padding-bottom: 4.07px;
+    padding-top: 3px;
+    padding-bottom: 4px;
 }
 
 .logo-text {
@@ -63,6 +63,7 @@ body {
     background-size: cover;
     padding-top: 218px;
     padding-bottom: 256px;
+    margin-bottom: 54px;
 }
 
 .hero-title {
@@ -83,4 +84,85 @@ body {
     color: #FFFFFF;
     margin: 0;
     letter-spacing: 0;
+}
+
+.news-header {
+    margin-bottom: 60px;
+}
+
+.news-section-title {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+
+.four-news {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 80px 40px
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.news-card-date {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    color: #6C6E7B;
+    display: inline-block;
+    background-color: #ECF2F5;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    align-self: flex-start;
+}
+
+.news-card-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+    color: #841844;
+    margin: 0 0 30px 0;
+}
+
+.news-card-text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+}
+
+.news-card-btn {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #841844;
+    border-radius: 50px;
+    border: 2px solid #9B407A;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: auto 0 0 0;
+    padding: 16px 40px;
+}
+
+.news-card-btn-img {
+    display: block;
+    width: 25px;
 }
