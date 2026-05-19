@@ -8,10 +8,15 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/fonts/OpenSans-Regular.ttf") format('truetype');
+    src: url("/fonts/OpenSans-SemiBold.ttf") format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -24,6 +29,7 @@
 
 .main-header {
     margin-top: 40px;
+    margin-bottom: 43px;
 }
 
 .logo-link {
@@ -35,8 +41,8 @@
 
 .logo-img {
     display: block;
-    height: 74px;
-    width: auto;
+    width: 93px;
+    height: 66px;
     padding-top: 3.93px;
     padding-bottom: 4.07px;
 }
@@ -52,7 +58,6 @@
 }
 
 .main-content {
-    background-image: url("/uploads/0cdfb0183c985bea52e35b50e99f0909.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
