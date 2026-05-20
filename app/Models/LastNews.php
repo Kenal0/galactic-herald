@@ -2,7 +2,6 @@
 
 namespace app\Models;
 use app\Core\Database;
-use PDO;
 
 class LastNews
 {

@@ -26,7 +26,6 @@
                 </p>
                 <a href="/new?id=" class="news-card-btn">
                     Подробнее
-                    <img src="/images/Arrow1.svg" class="news-card-btn-img">
                 </a>
             </article>
         <?php endforeach; ?>
