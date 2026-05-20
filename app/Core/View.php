@@ -5,10 +5,12 @@ namespace app\Core;
 class View {
     public static function view(string $path, array $data = []) : void
     {
-        if (file_exists($path)) {
-            require $path;
+        $absolutePath = __DIR__ . '/../../' . $path;
+
+        if (file_exists($absolutePath)) {
+            require $absolutePath;
         } else {
-            die("Шаблон с адресом {$path} не найден");
+            die("Шаблон с адресом {$absolutePath} не найден");
         }
     }
 }

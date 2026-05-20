@@ -5,10 +5,10 @@ use app\Core\Database;
 
 class LastNews
 {
-    public static function getMainNew()
+    public static function getMainNews()
     {
         $db = Database::getInstance()->getConnection();
-        return $db->query("SELECT title, announce, image from news ORDER BY date DESC LIMIT 1")
+        return $db->query('SELECT title, announce, image from news ORDER BY date DESC LIMIT 1')
             ->fetch();
 
     }
@@ -19,10 +19,10 @@ class LastNews
 
         $offset = ($page - 1) * $limit;
 
-        $sql = "SELECT date, title, announce 
+        $sql = 'SELECT id, date, title, announce 
                 FROM news 
                 ORDER BY date DESC 
-                LIMIT :limit OFFSET :offset";
+                LIMIT :limit OFFSET :offset';
 
         $stmt = $db->prepare($sql);
 
@@ -38,10 +38,28 @@ class LastNews
     {
         $db = Database::getInstance()->getConnection();
 
-        $sql = "SELECT COUNT(*) FROM news";
+        $sql = 'SELECT COUNT(*) FROM news';
 
         $totalNews = (int)$db->query($sql)->fetchColumn();
 
         return (int)ceil($totalNews / $limit);
     }
+
+    public static function getNewsDetail(int $id) : ?array
+    {
+        $db = Database::getInstance()->getConnection();
+
+        $sql = 'SELECT id, title, announce, content, image 
+                FROM news 
+                WHERE id = :id';
+
+        $stmt = $db->prepare($sql);
+
+        $stmt->execute([
+            'id' => $id
+        ]);
+
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+
 }
