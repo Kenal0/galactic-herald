@@ -4,10 +4,13 @@ namespace app\Models;
 use app\Core\Database;
 use PDO;
 
-class LastNews {
-    public static function getMainNew() {
+class LastNews
+{
+    public static function getMainNew()
+    {
         $db = Database::getInstance()->getConnection();
-        return $db->query("SELECT title, announce, image from news ORDER BY date DESC LIMIT 1")->fetch();
+        return $db->query("SELECT title, announce, image from news ORDER BY date DESC LIMIT 1")
+            ->fetch();
 
     }
 
@@ -30,5 +33,16 @@ class LastNews {
         ]);
 
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public static function getTotalPages(int $limit = 4): int
+    {
+        $db = Database::getInstance()->getConnection();
+
+        $sql = "SELECT COUNT(*) FROM news";
+
+        $totalNews = (int)$db->query($sql)->fetchColumn();
+
+        return (int)ceil($totalNews / $limit);
     }
 }
