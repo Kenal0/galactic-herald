@@ -16,9 +16,9 @@
         <?php foreach ($data['fourNews'] as $news) : ?>
             <a href="/news?id=<?= (int)$news['id'] ?>" class=news-card-link>
                 <article class="news-card">
-                <span class="news-card-date">
+                    <span class="news-card-date">
                     <?= htmlspecialchars(date('d.m.Y', strtotime($news['date']))) ?>
-                </span>
+                     </span>
                     <h2 class="news-card-title">
                         <?= htmlspecialchars($news['title']) ?>
                     </h2>
@@ -28,8 +28,7 @@
                     <span class="news-card-btn">
                     Подробнее
                     </span>
-
-            </article>
+                 </article>
             </a>
         <?php endforeach; ?>
     </div>

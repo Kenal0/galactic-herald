@@ -49,7 +49,7 @@ class LastNews
     {
         $db = Database::getInstance()->getConnection();
 
-        $sql = 'SELECT id, title, announce, content, image 
+        $sql = 'SELECT id, date, title, announce, content, image 
                 FROM news 
                 WHERE id = :id';
 
