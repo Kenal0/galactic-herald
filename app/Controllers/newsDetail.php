@@ -3,7 +3,7 @@
 use app\Core\View;
 use app\Models\LastNews;
 
-$id = 1;
+$id = (int)$_GET['id'];
 
 
 $newsDetail = LastNews::getNewsDetail($id);
