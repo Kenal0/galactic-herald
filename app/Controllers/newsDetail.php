@@ -14,7 +14,7 @@ if ($newsDetail === null) {
     exit();
 }
 
-View::view("/views/newsDetail.php", [
+View::view("views/newsDetail.php", [
     'newsDetail' => $newsDetail,
     'currentPage' => $page,
 ]);

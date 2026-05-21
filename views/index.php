@@ -14,7 +14,7 @@
 
     <div class="four-news" id="news-section">
         <?php foreach ($data['fourNews'] as $news) : ?>
-            <a href="/news?id=<?= (int)$news['id'] ?>&page=<?= (int)$data['currentPage']?>" class=news-card-link>
+            <a href="/news?id=<?= (int)$news['id'] ?>&page=<?= (int)$data['currentPage']?>" class="news-card-link">
                 <article class="news-card">
                     <span class="news-card-date">
                     <?= htmlspecialchars(date('d.m.Y', strtotime($news['date']))) ?>
@@ -36,7 +36,7 @@
     <nav class="news-pagination">
 
         <?php if ($data['currentPage'] > 1) : ?>
-            <a href="?page=<?= $data['currentPage'] - 1 ?>#news-section" class="pagination-item pagination-prev">
+            <a href="?page=<?= $data['currentPage'] - 1 ?>#news-section" class="pagination-item pagination-prev"></a>
         <?php endif; ?>
         <?php for ($i = $data['pagination']['startPage'] ; $i <= $data['pagination']['endPage']; $i++) : ?>
             <?php if ($i === $data['currentPage']) : ?>
@@ -51,8 +51,7 @@
         <?php endfor; ?>
 
         <?php if ($data['currentPage'] < $data['totalPages']) : ?>
-            <a href="?page=<?= $data['currentPage'] + 1 ?>#news-section" class="pagination-item pagination-next">
-            </a>
+            <a href="?page=<?= (int)$data['currentPage'] + 1 ?>#news-section" class="pagination-item pagination-next"></a>
         <?php endif; ?>
 
     </nav>
