@@ -1,9 +1,9 @@
 <?php require_once('views/partials/head.php') ?>
 
-<main class="main-content" style="background-image: url('/uploads/<?= htmlspecialchars($data['mainImage']) ?>');">
+<main class="main-content" style="background-image: url('/uploads/<?= htmlspecialchars($data['mainNews']['image']) ?>');">
     <section class="hero-banner container">
-        <h1 class="hero-title"><?= htmlspecialchars($data['mainTitle']) ?></h1>
-        <p class="hero-text"><?= htmlspecialchars(strip_tags($data['mainAnnounce'])) ?></p>
+        <h1 class="hero-title"><?= htmlspecialchars($data['mainNews']['title']) ?></h1>
+        <p class="hero-text"><?= htmlspecialchars(strip_tags($data['mainNews']['announce'])) ?></p>
     </section>
 </main>
 

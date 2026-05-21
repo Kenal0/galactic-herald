@@ -19,7 +19,7 @@ class LastNews
     public static function getMainNews(): array
     {
         return self::getDb()->query('SELECT title, announce, image from news ORDER BY date DESC LIMIT 1')
-            ->fetch();
+            ->fetch(\PDO::FETCH_ASSOC);
     }
 
     public static function getFourNews(int $page = 1, int $limit = 4): array
@@ -50,7 +50,7 @@ class LastNews
         return (int)ceil($totalNews / $limit);
     }
 
-    public static function getNewsDetail(int $id): ?array
+    public static function getNewsDetail(int $id): array
     {
         $sql = 'SELECT id, date, title, announce, content, image 
                 FROM news 
