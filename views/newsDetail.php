@@ -10,12 +10,12 @@
          /
     </span>
     <span class="breadcrumbs-current">
-        <?= $data['newsDetail']['title'] ?>
+        <?= htmlspecialchars($data['newsDetail']['title']) ?>
     </span>
 </nav>
 
 <h1 class="news-detail-title container">
-    <?= $data['newsDetail']['title'] ?>
+    <?= htmlspecialchars($data['newsDetail']['title']) ?>
 </h1>
 
 <section class="news-section-detail">
@@ -25,17 +25,17 @@
             <?= htmlspecialchars(date('d.m.Y', strtotime($data['newsDetail']['date']))) ?>
         </span>
         <h2 class="news-detail-announce">
-        <?= strip_tags($data['newsDetail']['announce']) ?>
+        <?= htmlspecialchars(strip_tags($data['newsDetail']['announce'])) ?>
         </h2>
         <div class="news-detail-content">
         <?= $data['newsDetail']['content'] ?>
         </div>
-        <a href="/?page=<?= $data['currentPage'] ?>#news-section" class="news-detail-back-btn">
+        <a href="/?page=<?= (int)$data['currentPage'] ?>#news-section" class="news-detail-back-btn">
             Назад к новостям
         </a>
         </div>
         <div class="news-detail-right">
-            <img src="/uploads/<?= $data['newsDetail']['image'] ?>" alt="Изображение к новости" class="news-detail-img">
+            <img src="/uploads/<?= htmlspecialchars($data['newsDetail']['image']) ?>" alt="Изображение к новости" class="news-detail-img">
         </div>
     </div>
 </section>
