@@ -50,7 +50,7 @@ class LastNews
         return (int)ceil($totalNews / $limit);
     }
 
-    public static function getNewsDetail(int $id): array
+    public static function getNewsDetail(int $id): ?array
     {
         $sql = 'SELECT id, date, title, announce, content, image 
                 FROM news 
@@ -62,7 +62,7 @@ class LastNews
             'id' => $id
         ]);
 
-        return $stmt->fetch(\PDO::FETCH_ASSOC);
+        return $stmt->fetch(\PDO::FETCH_ASSOC) ?: null;
     }
 
 }

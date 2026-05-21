@@ -7,6 +7,11 @@ $id = (int)$_GET['id'];
 
 $newsDetail = LastNews::getNewsDetail($id);
 
+if ($newsDetail === null) {
+    header('Location: /');
+    exit;
+}
+
 View::view("/views/newsDetail.php", [
     'newsDetail' => $newsDetail,
 ]);
