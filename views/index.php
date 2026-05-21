@@ -38,7 +38,7 @@
         <?php if ($data['currentPage'] > 1) : ?>
             <a href="?page=<?= $data['currentPage'] - 1 ?>#news-section" class="pagination-item pagination-prev">
         <?php endif; ?>
-        <?php for ($i = $data['startPage'] ; $i <= $data['endPage']; $i++) : ?>
+        <?php for ($i = $data['pagination']['startPage'] ; $i <= $data['pagination']['endPage']; $i++) : ?>
             <?php if ($i === $data['currentPage']) : ?>
                 <span class="pagination-item pagination-item-active">
                     <?= $i ?>
