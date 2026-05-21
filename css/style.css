@@ -23,8 +23,6 @@ body {
     max-width: 1520px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .main-header {
@@ -45,6 +43,11 @@ body {
     height: 66px;
     padding-top: 3px;
     padding-bottom: 4px;
+}
+
+.logo-link:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 4px;
 }
 
 .logo-text {
@@ -73,7 +76,6 @@ body {
     line-height: 1.4;
     color: #FFFFFF;
     margin: 0 0 30px 0;
-    letter-spacing: 0;
 }
 
 .hero-text {
@@ -149,7 +151,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 32px;
-    line-height: 1;
+    line-height: 1.4;
     margin: 0 0 30px 0;
     transition: color 0.3s ease;
 }
@@ -182,8 +184,8 @@ body {
     padding: 16px 75px 16px 40px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15' fill='none'%3E%3Cpath d='M1 6.36395C0.447715 6.36395 4.82823e-08 6.81167 0 7.36395C-4.82823e-08 7.91624 0.447715 8.36395 1 8.36395L1 6.36395ZM26.707 8.07106C27.0975 7.68054 27.0975 7.04737 26.707 6.65685L20.343 0.292887C19.9525 -0.0976379 19.3193 -0.097638 18.9288 0.292886C18.5383 0.683411 18.5383 1.31658 18.9288 1.7071L24.5857 7.36395L18.9288 13.0208C18.5383 13.4113 18.5383 14.0445 18.9288 14.435C19.3193 14.8255 19.9525 14.8255 20.343 14.435L26.707 8.07106ZM1 8.36395L25.9999 8.36395L25.9999 6.36395L1 6.36395L1 8.36395Z' fill='%23841844'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: 153px center;
-    background-size: 25px auto;
+    background-position: 147px center;
+    background-size: 26px auto;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -194,8 +196,8 @@ body {
     border-radius: 50px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15' fill='none'%3E%3Cpath d='M1 6.36395C0.447715 6.36395 4.82823e-08 6.81167 0 7.36395C-4.82823e-08 7.91624 0.447715 8.36395 1 8.36395L1 6.36395ZM26.707 8.07106C27.0975 7.68054 27.0975 7.04737 26.707 6.65685L20.343 0.292887C19.9525 -0.0976379 19.3193 -0.097638 18.9288 0.292886C18.5383 0.683411 18.5383 1.31658 18.9288 1.7071L24.5857 7.36395L18.9288 13.0208C18.5383 13.4113 18.5383 14.0445 18.9288 14.435C19.3193 14.8255 19.9525 14.8255 20.343 14.435L26.707 8.07106ZM1 8.36395L25.9999 8.36395L25.9999 6.36395L1 6.36395L1 8.36395Z' fill='white'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: 153px center;
-    background-size: 25px auto;
+    background-position: 147px center;
+    background-size: 26px auto;
     transition: opacity 0.3s ease;
     opacity: 0;
 }
@@ -264,7 +266,7 @@ body {
 }
 
 .footer {
-    padding: 64px 0 84px 0;
+    padding: 50px 0 84px 0;
     border-top: 1px solid #6C6E7B;
     margin-bottom: 64px;
 }
@@ -313,19 +315,39 @@ body {
     font-weight: 400;
 }
 
+.news-section-detail .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 137px;
+}
+
+.news-detail-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+
 .news-detail-title {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 64px;
     line-height: 1.4;
+    margin-top: 0;
     margin-bottom: 63px;
 }
 
-.news-detail-announce {
+.news-detail-announce,
+.news-detail-announce h2{
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 32px;
-    line-height: 1;
+    line-height: 1.4;
+    color: #841844;
+    margin-top: 10px;
     margin-bottom: 40px;
 }
 
@@ -335,6 +357,14 @@ body {
     font-weight: 400;
     font-size: 20px;
     line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.news-detail-content p:last-child {
+    margin-bottom: 0;
+}
+
+.news-detail-content {
     margin-bottom: 40px;
 }
 
@@ -379,4 +409,10 @@ body {
 
 .news-detail-back-btn:hover::after {
     opacity: 1;
+}
+
+.news-detail-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
