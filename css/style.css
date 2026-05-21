@@ -253,7 +253,8 @@ body {
     width: 106px;
     border-radius: 50px;
     transition: background 0.3s ease, background-color 0.3s ease;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 27 15' fill='none'%3E%3Cpath d='M1 6.36395C0.447715 6.36395 4.82823e-08 6.81167 0 7.36395C-4.82823e-08 7.91624 0.447715 8.36395 1 8.36395L1 6.36395ZM26.707 8.07106C27.0975 7.68054 27.0975 7.04737 26.707 6.65685L20.343 0.292887C19.9525 -0.0976379 19.3193 -0.097638 18.9288 0.292886C18.5383 0.683411 18.5383 1.31658 18.9288 1.7071L24.5857 7.36395L18.9288 13.0208C18.5383 13.4113 18.5383 14.0445 18.9288 14.435C19.3193 14.8255 19.9525 14.8255 20.343 14.435L26.707 8.07106ZM1 8.36395L25.9999 8.36395L25.9999 6.36395L1 6.36395L1 8.36395Z' fill='%23841844'/%3E%3C/svg%3E") no-repeat center / 18px auto;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12H19M19 12L13 6M19 12L13 18' stroke='%23841844' stroke-width='3' stroke-linecap='square'/%3E%3C/svg%3E") no-repeat center;
+    background-size: 20px auto;
 }
 
 .pagination-prev {
@@ -263,8 +264,7 @@ body {
 .pagination-prev:hover,
 .pagination-next:hover {
     background-color: #841844;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15' fill='none'%3E%3Cpath d='M1 6.36395C0.447715 6.36395 4.82823e-08 6.81167 0 7.36395C-4.82823e-08 7.91624 0.447715 8.36395 1 8.36395L1 6.36395ZM26.707 8.07106C27.0975 7.68054 27.0975 7.04737 26.707 6.65685L20.343 0.292887C19.9525 -0.0976379 19.3193 -0.097638 18.9288 0.292886C18.5383 0.683411 18.5383 1.31658 18.9288 1.7071L24.5857 7.36395L18.9288 13.0208C18.5383 13.4113 18.5383 14.0445 18.9288 14.435C19.3193 14.8255 19.9525 14.8255 20.343 14.435L26.707 8.07106ZM1 8.36395L25.9999 8.36395L25.9999 6.36395L1 6.36395L1 8.36395Z' fill='white'/%3E%3C/svg%3E");
-    background-size: 18px auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12H19M19 12L13 6M19 12L13 18' stroke='%23ffffff' stroke-width='3' stroke-linecap='square'/%3E%3C/svg%3E");
 }
 
 .footer {
