@@ -9,7 +9,7 @@ $newsDetail = LastNews::getNewsDetail($id);
 
 if ($newsDetail === null) {
     header('Location: /');
-    exit;
+    exit();
 }
 
 View::view("/views/newsDetail.php", [
