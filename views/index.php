@@ -14,7 +14,7 @@
 
     <div class="four-news" id="news-section">
         <?php foreach ($data['fourNews'] as $news) : ?>
-            <a href="/news?id=<?= (int)$news['id'] ?>" class=news-card-link>
+            <a href="/news?id=<?= (int)$news['id'] ?>&page=<?= (int)$data['currentPage']?>" class=news-card-link>
                 <article class="news-card">
                     <span class="news-card-date">
                     <?= htmlspecialchars(date('d.m.Y', strtotime($news['date']))) ?>
