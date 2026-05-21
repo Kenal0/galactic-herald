@@ -5,6 +5,8 @@ use app\Models\LastNews;
 
 $id = (int)$_GET['id'];
 
+$page = (int)($_GET['page'] ?? 1);
+
 $newsDetail = LastNews::getNewsDetail($id);
 
 if ($newsDetail === null) {
@@ -14,4 +16,5 @@ if ($newsDetail === null) {
 
 View::view("/views/newsDetail.php", [
     'newsDetail' => $newsDetail,
+    'currentPage' => $page,
 ]);

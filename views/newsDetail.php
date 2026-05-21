@@ -30,7 +30,7 @@
         <div class="news-detail-content">
         <?= $data['newsDetail']['content'] ?>
         </div>
-        <a href="/" class="news-detail-back-btn">
+        <a href="/?page=<?= $data['currentPage'] ?>#news-section" class="news-detail-back-btn">
             Назад к новостям
         </a>
         </div>
