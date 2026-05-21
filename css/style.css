@@ -265,7 +265,6 @@ body {
 .pagination-next:hover {
     background-color: #841844;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12H19M19 12L13 6M19 12L13 18' stroke='%23ffffff' stroke-width='3' stroke-linecap='square'/%3E%3C/svg%3E");
-    background-size: 20px auto;
 }
 
 .footer {
