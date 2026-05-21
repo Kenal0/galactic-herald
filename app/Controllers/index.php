@@ -25,5 +25,5 @@ View::view("views/index.php", [
     'fourNews' => $fourNews,
     'currentPage' => $page,
     'totalPages' => $totalPages,
-    '$pagination' => $pagination
+    'pagination' => $pagination,
 ]);

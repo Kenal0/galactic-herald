@@ -7,12 +7,12 @@
     </section>
 </main>
 
-<section class="news-section container" id="news-section">
+<section class="news-section container">
     <div class="news-header">
         <h1 class="news-section-title">Новости</h1>
     </div>
 
-    <div class="four-news">
+    <div class="four-news" id="news-section">
         <?php foreach ($data['fourNews'] as $news) : ?>
             <a href="/news?id=<?= (int)$news['id'] ?>" class=news-card-link>
                 <article class="news-card">

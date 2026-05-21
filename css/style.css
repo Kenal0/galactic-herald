@@ -106,6 +106,7 @@ body {
 }
 
 .four-news {
+    min-height: 780px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 80px 40px;
@@ -125,6 +126,7 @@ body {
 }
 
 .news-card {
+    max-height: 400px;
     display: flex;
     flex-direction: column;
     height: 100%;
