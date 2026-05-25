@@ -1,10 +1,10 @@
 <?php
 
-namespace app\Models;
+namespace App\Models;
 
-use app\Core\Database;
+use App\Core\Database;
 
-class LastNews
+class News
 {
     private static ?\PDO $db = null;
 
@@ -63,6 +63,11 @@ class LastNews
         ]);
 
         return $stmt->fetch(\PDO::FETCH_ASSOC) ?: null;
+    }
+
+    public function pageChecker()
+    {
+
     }
 
 }

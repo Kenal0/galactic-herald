@@ -2,11 +2,18 @@
 
 require_once __DIR__ . '/app/Core/bootstrap.php';
 
-use app\Core\Router;
+use App\Core\Router;
+use App\Controllers\NewsDetail;
+use App\Controllers\Index;
+use App\Core\Container;
+use App\Core\Request;
+
+
+require 'container.php';
 
 $router = new Router();
 
-$router->get('/', 'app/Controllers/index.php');
-$router->get('/news', 'app/Controllers/newsDetail.php');
+$router->get('/', [Index::class, 'index']);
+$router->get('/news', [NewsDetail::class, 'detail']);
 
 $router->run();
