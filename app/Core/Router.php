@@ -1,13 +1,13 @@
 <?php
 
-namespace app\Core;
+namespace App\Core;
 
 use http\Exception\BadConversionException;
 
 class Router
 {
     private array $routes = [];
-    public function get(string $path, string $controller)
+    public function get(string $path, array $controller)
     {
         $this->routes[$path] = $controller;
     }
@@ -16,11 +16,17 @@ class Router
     {
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-        if (key_exists($uri, $this->routes))
-        {
-            $controllerPath = $this->routes[$uri];
-            require_once $controllerPath;
-            exit;
+        if (key_exists($uri, $this->routes)) {
+            [$className, $method] = $this->routes[$uri];
+
+            if (class_exists($className)) {
+                $controller = new $className();
+
+                if (method_exists($controller, $method)) {
+                   $controller->$method();
+                   exit;
+                }
+            }
         }
 
         http_response_code(404);

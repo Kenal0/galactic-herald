@@ -1,19 +1,18 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
 class PaginationRange
 {
 
-    public static function paginationRangeCalculate (int $page, int $totalPages)
+    public static function paginationRangeCalculate (int $page, int $totalPages): array
     {
         $maxVisibleButtons = 3;
 
         $startPage = max(1, $page - intdiv($maxVisibleButtons - 1, 2));
         $endPage = min($totalPages, $startPage + $maxVisibleButtons - 1);
 
-        if ($endPage - $startPage + 1 < $maxVisibleButtons)
-        {
+        if ($endPage - $startPage + 1 < $maxVisibleButtons) {
         $startPage = max(1, $endPage - $maxVisibleButtons + 1);
         }
 
